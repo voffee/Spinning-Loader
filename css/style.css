@@ -1,7 +1,21 @@
 
 /* Declaring Root Variables */
 :root {
+    /* Page color */
+    --brown-color: #B4835B;
 
+    /* Dark text color */
+    --dark-text-color: #36454F;
+
+    /* Linear-gradient colors */
+    --start-color: #F2F0EB;
+    --stop-color: #FFDA29;
+
+    /* Spinner color */
+    --spinner-color: #FFF;
+
+    /* Ribbon color */
+    --ribbon-color: #ED2939;
 }
 
 /* Global Reset */
@@ -13,5 +27,20 @@
 
 body {
     height: 100vh;
-    
+}
+
+.spinner {
+    height: 100px;
+    width: 100px;
+
+    position: relative;
+}
+
+.spinner-segment-white {
+    height: 100%; /* Setting to 100% makes element expand to fit parent size. */
+    width: 100%; /* Setting to 100% makes element expand to fit parent size. */
+    border-radius: 50%;
+    background-color: red;
+
+    position: absolute;
 }
