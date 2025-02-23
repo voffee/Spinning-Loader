@@ -8,8 +8,9 @@
     --dark-text-color: #36454F;
 
     /* Linear-gradient colors */
-    --start-color: #F2F0EB;
-    --stop-color: #FFDA29;
+    --start-stop-color: #E3C5FF;
+    --mid1-color: #FFDA29;
+    --mid2-color: #00F7FF;
 
     /* Spinner color */
     --spinner-color: #FFF;
@@ -56,12 +57,26 @@ h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 44px;
+    font-size: 54px;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, var(--start-stop-color), var(--mid1-color), var(--mid2-color), var(--mid1-color), var(--start-stop-color));
+    background-clip: text;
+    background-size: 400%;
+    color: transparent;
+
+    margin: 25px 0px 25px 0px;
+    padding: 12px 0px 15px 0px;
+
+    animation: gradient-animation 3s linear infinite;
 }
 
 .spinner {
     height: 200px;
     width: 200px;
+
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
 
     position: relative;
 }
@@ -98,4 +113,15 @@ h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+
+/* Keyframes */
+@keyframes gradient-animation {
+    0% {
+        background-position: 00%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
 }
