@@ -2,7 +2,7 @@
 /* Declaring Root Variables */
 :root {
     /* Page color */
-    --brown-color: #B4835B;
+    --page-color: #F4F4F5;
 
     /* Dark text color */
     --dark-text-color: #36454F;
@@ -16,6 +16,9 @@
 
     /* Ribbon color */
     --ribbon-color: #ED2939;
+
+    /* Control Bar color */
+    --control-bar-color: #9292F5;
 }
 
 /* Global Reset */
@@ -27,11 +30,38 @@
 
 body {
     height: 100vh;
+    background-color: var(--page-color);
+}
+
+.ribbon {
+    background-color: var(--ribbon-color);
+    height: 45px;
+    width: 100%;
+}
+
+.ribbon p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 44px;
 }
 
 .spinner {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
 
     position: relative;
 }
@@ -40,7 +70,32 @@ body {
     height: 100%; /* Setting to 100% makes element expand to fit parent size. */
     width: 100%; /* Setting to 100% makes element expand to fit parent size. */
     border-radius: 50%;
-    background-color: red;
+    background-color: blue;
 
     position: absolute;
+}
+
+.controlbar {
+    height: 50px;
+    width: 200px;
+    background-color: var(--control-bar-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controlbar p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }

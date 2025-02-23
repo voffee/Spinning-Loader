@@ -1,2 +1,6 @@
 
-// alert(1);
+// Define UI Variables
+
+// Add Event Listeners
+
+// Create Functions
