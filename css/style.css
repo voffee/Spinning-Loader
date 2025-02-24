@@ -13,7 +13,7 @@
     --mid2-color: #00F7FF;
 
     /* Spinner color */
-    --spinner-color: #FFF;
+    --spinner-color: #ffd764;
 
     /* Ribbon color */
     --ribbon-color: #ED2939;
@@ -60,9 +60,14 @@ h1 {
     font-size: 54px;
     text-transform: uppercase;
 
-    background: linear-gradient(90deg, var(--start-stop-color), var(--mid1-color), var(--mid2-color), var(--mid1-color), var(--start-stop-color));
+    background: linear-gradient(90deg, 
+                var(--start-stop-color), 
+                var(--mid1-color), 
+                var(--mid2-color), 
+                var(--mid1-color), 
+                var(--start-stop-color));
     background-clip: text;
-    background-size: 400%;
+    background-size:200%;
     color: transparent;
 
     margin: 25px 0px 25px 0px;
@@ -81,13 +86,22 @@ h1 {
     position: relative;
 }
 
-.spinner-segment-white {
+.spinner-segment {
     height: 100%; /* Setting to 100% makes element expand to fit parent size. */
     width: 100%; /* Setting to 100% makes element expand to fit parent size. */
     border-radius: 50%;
-    background-color: blue;
+    border: 15px solid transparent;
+    /* background-color: blue; */
 
     position: absolute;
+}
+
+.spinner-segment-colored {
+    border-top: 15px solid var(--spinner-color);
+}
+
+.rotate-switch {
+    animation: rotate-segment 5s linear infinite;
 }
 
 .controlbar {
@@ -118,10 +132,20 @@ h1 {
 /* Keyframes */
 @keyframes gradient-animation {
     0% {
-        background-position: 00%;
+        background-position: 0%;
     }
 
     100% {
-        background-position: 100%;
+        background-position: 200%;
+    }
+}
+
+@keyframes rotate-segment {
+    0% {
+
+    }
+
+    100% {
+        transform: rotate(360deg)
     }
 }
